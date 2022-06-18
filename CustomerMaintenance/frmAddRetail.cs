@@ -37,7 +37,8 @@ namespace CustomerMaintenance
         {
             if (IsValidData())
             {
-                // TODO: Add code that creates a new retail customer
+                customer = new RetailCustomer(txtFirstName.Text, txtLastName.Text,
+                    txtEmail.Text, txtHomePhone.Text);
                 this.Close();
             }
         }
