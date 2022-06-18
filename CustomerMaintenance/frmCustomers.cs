@@ -14,6 +14,15 @@ using System.Windows.Forms;
  * Exercise 14-1 Create a Customer Maintenance 
  *      application that uses inheritance
  * Dominique Tepper, 17JUN2022
+ * 
+ * 6. a. Modify event handlers for btnAdd_Click.
+ *      1. Wholesale
+ *      2. Retail
+ *    b. Create new instance of add customer form
+ *       as GetNewCustomer()
+ *    c. Object saved to appropriate variable type
+ *    Valid input only
+ *    use HandleChange() event handler
  * **********************************************/
 
 namespace CustomerMaintenance
