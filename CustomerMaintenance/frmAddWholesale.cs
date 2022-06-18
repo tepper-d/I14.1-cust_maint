@@ -12,6 +12,9 @@ using System.Windows.Forms;
  * Exercise 14-1 Create a Customer Maintenance 
  *      application that uses inheritance
  * Dominique Tepper, 17JUN2022
+ * 
+ * 5A. Modify btnSave_Click event handler to
+ *     create a new customer from valid input.
  * **********************************************/
 
 namespace CustomerMaintenance
