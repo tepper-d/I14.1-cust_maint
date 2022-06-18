@@ -15,13 +15,13 @@ using System.Windows.Forms;
  *      application that uses inheritance
  * Dominique Tepper, 17JUN2022
  * 
- * 6. a. Modify event handlers for btnAdd_Click.
- *      1. Wholesale
- *      2. Retail
- *    b. Create new instance of add customer form
+ * 6. 1. Modify event handlers for btnAdd_Click.
+ *      a. Wholesale
+ *      b. Retail
+ *    2. Create new instance of add customer form
  *       as GetNewCustomer()
- *    c. Object saved to appropriate variable type
- *    Valid input only
+ *    3. Object saved to appropriate variable type
+ *     != null
  *    use HandleChange() event handler
  * **********************************************/
 
@@ -53,18 +53,30 @@ namespace CustomerMaintenance
             }
         }
 
+
+        //6A.
+        //Tepper, 17JUN2022
         private void btnAddWholesale_Click(object sender, EventArgs e)
         {
             Customer customer;
-            // TODO: Add code that lets the user enter a new wholesale customer
-            // and adds that customer to the customer list
+            frmAddWholesale addWholesaleForm = new frmAddWholesale();
+            customer = addWholesaleForm.GetNewCustomer();
+            if (customer != null)
+            {
+                customers.Add(customer);
+            }
         }
 
+        //6B.
         private void btnAddRetail_Click(object sender, EventArgs e)
         {
             Customer customer;
-            // TODO: Add code that lets the user enter a new retail customer
-            // and adds that customer to the customer list
+            frmAddRetail addRetailForm = new frmAddRetail();
+            customer = addRetailForm.GetNewCustomer();
+            if (customer != null)
+            {
+                customers.Add(customer);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
