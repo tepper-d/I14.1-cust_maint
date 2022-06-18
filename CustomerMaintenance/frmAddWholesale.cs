@@ -38,7 +38,8 @@ namespace CustomerMaintenance
         {
             if (IsValidData())
             {
-                // TODO: Add code that creates a new wholesale customer
+                customer = new WholesaleCustomer(txtFirstName.Text, txtLastName.Text,
+                    txtEmail.Text, txtCompany.Text);
                 this.Close();
             }
         }
