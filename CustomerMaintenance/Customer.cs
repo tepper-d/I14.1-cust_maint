@@ -1,5 +1,13 @@
 using System;
 
+/* ***********************************************
+ * CIS123: Intro to Object-oriented Programming
+ * Chapter 14: How to work with inheritance
+ * Exercise 14-1 Create a Customer Maintenance 
+ *      application that uses inheritance
+ * Dominique Tepper, 17JUN2022
+ * **********************************************/
+
 namespace CustomerMaintenance
 {
     public class Customer
