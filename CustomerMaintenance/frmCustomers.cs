@@ -50,6 +50,7 @@ namespace CustomerMaintenance
 
 
         //14.2.3 use foreach isntead of for
+        //Tepper, 17JUN2022
         private void FillCustomerListBox()
         {
             lstCustomers.Items.Clear();
