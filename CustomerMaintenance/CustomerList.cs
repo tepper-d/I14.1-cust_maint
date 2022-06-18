@@ -4,14 +4,20 @@ using System.Collections.Generic;
 /* ***********************************************
  * CIS123: Intro to Object-oriented Programming
  * Chapter 14: How to work with inheritance
- * Exercise 14-1 Create a Customer Maintenance 
- *      application that uses inheritance
+ * Exercise 14-2 Modify the CustomerList class 
  * Dominique Tepper, 17JUN2022
+ * 
+ * 2. Modify the CustomerList class so it
+ *    inherits the List<Customer> class instead of
+ *    using a private List <> var.
+ *    a. delete the Count() method
+ *    b. use base class as necessary
  * **********************************************/
 
 namespace CustomerMaintenance
 {
-    public class CustomerList
+	//2. inherits from List<Customer>
+    public class CustomerList : List<Customer>
 	{
 		private List<Customer> customers;
 
@@ -23,7 +29,8 @@ namespace CustomerMaintenance
             customers = new List<Customer>();
 		}
 
-		public int Count => customers.Count;
+		//2a
+		//public int Count => customers.Count;
 
 		public Customer this[int i]
 		{

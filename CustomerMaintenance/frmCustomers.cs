@@ -23,6 +23,11 @@ using System.Windows.Forms;
  *    3. Object saved to appropriate variable type
  *     != null
  *    use HandleChange() event handler
+ *    
+ * Exercise 14.2
+ * 3. Modify the FillCustomerListBox() method of
+ *    the CustomerMaintenance form so it fills the\
+ *    list box using a foreach statement.
  * **********************************************/
 
 namespace CustomerMaintenance
@@ -43,12 +48,13 @@ namespace CustomerMaintenance
             FillCustomerListBox();
         }
 
+
+        //14.2.3 use foreach isntead of for
         private void FillCustomerListBox()
         {
             lstCustomers.Items.Clear();
-            for (int i = 0; i < customers.Count; i++)
+            foreach (Customer c in customers)
             {
-                Customer c = customers[i];
                 lstCustomers.Items.Add(c.GetDisplayText());
             }
         }
