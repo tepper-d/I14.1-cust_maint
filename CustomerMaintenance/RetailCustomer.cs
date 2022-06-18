@@ -9,56 +9,54 @@ using System.Text;
  *      application that uses inheritance
  * Dominique Tepper, 17JUN2022
  * 
- * 3. Add a WholesaleCustomer class that inherits
+ * 4. Add a RetailCustomer class that inherits
  *    from the Customer class.
  *    
- *      a. Company         string property
+ *      a. HomePhone         string property
  *      b. default constructor
  *      c. constructor that accepts 4 parameters
  *         and call base class constructor:
  *          1. first name
  *          2. last name
  *          3. email
- *          4. company
+ *          4. home phone
  *      d. override GetDisplayText() to add
  *         Company name in parenthesis
  * **********************************************/
 
 namespace CustomerMaintenance
 {
-    public class WholesaleCustomer : Customer
+    public class RetailCustomer : Customer
     {
-        //3a. Company string
-        private string company;
+        //4a. HomePhone string
+        private string homePhone;
 
-        //3b. default constructor
-        public WholesaleCustomer()
+        //4b. default constructor
+        public RetailCustomer()
         {
         }
 
-        //3c. custom constructor, 4 params
-        public WholesaleCustomer(string lastName, string firstName,
-            string email, string company) : base(lastName, firstName, email)
+        //4c. custom constructor, 4 params
+        public RetailCustomer(string lastName, string firstName,
+            string email, string homePhone) : base(lastName, firstName, email)
         {
-            this.company = company;
+            this.homePhone = homePhone;
         }
 
-        //3a. Company getter & setter
-        //Dominique Tepper, 17JUN2022
-        public string Company
+        //4a. HomePhone getter & setter
+        public string HomePhone
         {
             get
             {
-                return this.company;
+                return this.homePhone;
             }
             set
             {
-                this.company = value;
+                this.homePhone = value;
             }
         }
 
-        //3d. GDT() override
-        public override string GetDisplayText() => base.GetDisplayText() + " (" + this.company + ")";
-
+        //4d. GDT() override
+        public override string GetDisplayText() => base.GetDisplayText() + " ph: " + this.homePhone;
     }
 }
