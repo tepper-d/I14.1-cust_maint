@@ -34,6 +34,8 @@ namespace CustomerMaintenance
             return customer;
         }
 
+        //5A. Modify event handler that saves valid input
+        //Dominique Tepper, 17JUN2022
         private void btnSave_Click(object sender, System.EventArgs e)
         {
             if (IsValidData())
