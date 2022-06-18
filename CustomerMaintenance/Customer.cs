@@ -78,7 +78,11 @@ namespace CustomerMaintenance
 			}
 		}
 
-		public string GetDisplayText() => firstName + " " + lastName + ", " + email;
-		}
+/* *****************************************************************
+ * 2. Display the Customer Class and modify the GetDisplayText()
+ *    method so it's overridable.
+ * ******************************************** Tepper, 17JUN2022 */
+		public virtual string GetDisplayText() => firstName + " " + lastName + ", " + email;
 	}
+	
 }
